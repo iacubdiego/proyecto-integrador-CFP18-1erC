@@ -3,7 +3,7 @@ Proyecto Grupal Integrador de la Materia Tecnicas de Programacion CFP18 primer c
 
 # Miembros
 Diego Iacub - "Me gusta programar"  
-Jesus Dominguez
+Jesus Dominguez - 
 Anthony Chavez - "Me gusta Jugar"
 
 # Nombre del Sitio
