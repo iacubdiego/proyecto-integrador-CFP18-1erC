@@ -10,4 +10,5 @@ Anthony Chavez - "Me gusta Jugar"
 
 Matías Ibañez - "Me gusta aprender algo nuevo"
 
+Ariel Campos Tula - "A resolver algoritmos!!!"
 # Nombre del Sitio
