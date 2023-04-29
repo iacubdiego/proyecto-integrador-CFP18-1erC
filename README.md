@@ -13,4 +13,3 @@ Matías Ibañez - "Me gusta aprender algo nuevo"
 Ariel Campos Tula - "A resolver algoritmos!!!"
 # Nombre del Sitio
 
-Alejandra Ledda "Todos los dias se aprende algo nuevo"
