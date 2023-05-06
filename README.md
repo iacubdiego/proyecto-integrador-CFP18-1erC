@@ -14,5 +14,8 @@ Ariel Campos Tula - "A resolver algoritmos!!!"
 
 
 Alejandra Ledda
+
+Sasha Adorno - "Mi color favorito es el violeta"
+
 # Nombre del Sitio
 
