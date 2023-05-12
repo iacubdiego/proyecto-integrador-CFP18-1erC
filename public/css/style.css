@@ -62,11 +62,11 @@ header{
 }
 
 h1{
-  height: 120px;
+  height: 122px;
 }
 
 .seccion1{
-    background-color: rgb(0, 255, 0);
+    background-color: rgba(0, 255, 42, 0.733);
     
 }
 .seccion2{
@@ -75,7 +75,7 @@ h1{
 .seccion1,
 .seccion2{
     margin-bottom:15em;
-    padding: 10em;
+    padding: 2em;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -89,7 +89,7 @@ article{
 }
 
 IMG{
-  width: 200px;
+  width: 296px;
 }
 /* footer */
 /************************
