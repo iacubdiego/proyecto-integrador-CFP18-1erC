@@ -4,45 +4,106 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./public/css/style.css">
+    <link rel="stylesheet" href="/ProyectoGrupal/public/css/style.css">
     <title>Document</title>
   </head>
-  <body>
+  
     <header>
       <div class="logo">
-        <img src="./public/image/autospot.jfif" alt="logo" />
-         <input type="text" placeholder="Busca Tu Auto">
+        <img src="/image/autospot.jfif" alt="logo" />
+         
       </div>
       
     
-      <nav class="navbar">
+        <nav class="navbar">
             <ul>
-                <li><a href="/index.html">Inicio</a></li>
+                <li><a href="/index.html">A PAGINA DE INICIO</a></li>
+                                        
           
-                <li class="categoria">
-                 Categorias
-              
-                </li>
-                <h1>AutoSpot </h1>
-          </a>
             </ul>
         </nav>
-      </nav>
+      
     </header>
-    <h1>AutoSpot </h1>
-    <h2>Formulario de consultas</h2>
-   
+    <!-- Agrego estilo del Flormulario-->
+<style>
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #d91a2a;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: rgb(0, 1, 1);
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: rgb(14, 15, 14);
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #137718;
+}
+
+div {
+  border-radius: 5px;
+  color: #e3eae3;
+  background-color: #080909;
+  padding: 20px;
+}
+</style>
+<!-- Fin de  estilo del Flormulario-->
+
+    
+    <body>
+    <!-- Formulario con su estilo embuido -->
+    <h3>-- Para realizar su consulta ingrese sus datos, y el motivo de la consulta.</h3>
+
+<div>
+  <form action="/consultas.php">
+    
+    <label for="fname">Nombre</label>
+    <input type="text" id="fname" name="firstname" placeholder="Su nombre..">
+
+    <label for="lname">Apellido</label>
+    <input type="text" id="lname" name="lastname" placeholder="Su apellido.."><br><br>
+    
+    <label for="birthday">Fecha de nacimiento:</label>
+    <input type="date" id="birthday" name="birthday"><br><br>
+    
+
+    <label for="tuemail">Su email --------------</label>
+    <input type="email" id="tuemail" name="tuemail" placeholder="Su email.."><br><br>
+
+    <label for="motivo">Selecciones un principal de la consulta</label>
+    <select id="motivo" name="motivo">
+      <option value="compra">Compra</option>
+      <option value="financiamiento">Financiamiento</option>
+      <option value="entrega">Plazo de entrega</option>
+      <option value="garantia">Financiamiento</option>
+      <option value="servicio">Servicio Tecnico</option>
+    </select>
   
-    <h3>AutoSpot - Fin de formulario de consultas</h3>
+    <input type="submit" value="Submit">
+  </form>
+</div>
+<!-- Fin del Formulario con su estilo embuido -->
   </body>
   
   <footer class="footer">
-    
+   
 
     <div class="wrap-footer">
       <div class="text-element-footer element-footer">
         <div>
-          <img src="./public/image/autospot.jfif" alt="logo" />
+          <img src="./image/autospot.jfif" alt="logo" />
         </div> 
       <h3 class="main-c">Web de AutoSpot</h3>
       <p>FOOTER  AUTOSPOT </p>

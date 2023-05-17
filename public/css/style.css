@@ -119,30 +119,34 @@ header{
 }
 
 h1{
-  height: 100px;
+  height: 122px;
 }
 
 .seccion1{
-    background-color: blue;
+    background-color: rgba(49, 93, 158, 0.979);
     
 }
 .seccion2{
-    background-color: yellow;
+    background-color: rgb(54, 84, 139);
 }
 .seccion1,
 .seccion2{
-    margin-bottom:1em;
-    padding: 1em;
+    margin-bottom:15em;
+    padding: 2em;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 article{
-  margin: 20px;
-  margin-bottom: 50px;
+  margin: 0px;
+  margin-bottom: 5px;
   padding: 1em;
   
+}
+
+IMG{
+  width: 296px;
 }
 /* footer */
 /************************
@@ -181,6 +185,7 @@ footer li{
 }
 .logo-element_footer img{
   max-height: 75px;
+  
 }
 .element-footer h5{
   margin: 1rem 0;
