@@ -6,6 +6,12 @@
     box-sizing: border-box;
 }
 
+body {
+  background-color:lightgray;
+
+}
+
+
 .logo{
   padding: 10px;
   margin: 10px;
@@ -16,42 +22,93 @@ li{
     color:aliceblue
 }
 
+/* compraventa */
 .compra-venta{
+  position: absolute;
+  right: 0;
+  top: 0;
+  display:flex;
   padding: 10px;
-  margin: 10px;
+  gap:0 5px;
 }
 
-.navbar{
-  padding: 10px;
-  margin: 10px;
+.compra-venta li{
+  color: #0e0d0d;
+  margin: 0 10px;
 }
-
-.navbar ul,
 .compra-venta ul{
-    display:flex;    
+  gap: 5px;
+  display:flex;    
+}
+
+.btn{
+  background:lightgray;
+  padding: 5px;
+  border-radius: 15px;
+}
+.btn:nth-child(1){
+  background-color: aquamarine;
+}
+input{
+  border-radius: 15px;
+  text-indent: 7px;
+}
+/* fincompraventa */
+ /* nav y header*/
+
+header{
+  display:flex;
+  background-color: black;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo{
+  padding: 10px;
+  margin: 10px;
+}
+
+/* .navbar ul,
+.compra-venta ul{
+    display:flex;
+}     */
+.navbar{
+ background-color: black;
+ position: absolute;
+ top: 38%;
+ width: 100%;
+ box-shadow: 0 .5rem .8rem rgba(255, 255, 255, 1);
 }
 .navbar ul{
     margin: 12px;
+    display:flex;
+
 }
+.navbar li{
+  margin:0 12px; 
+
+}
+.navbar li:hover{
+  border: 1px solid #fff;
+  border-radius: 10px;
+}
+/* finnav */ 
+/* categoria */
+
 .categoria ul{
     display: none;
     position: absolute;
-    z-index: 1;
 }
-.categoria:hover ul{
+.categoria:hover li{
     display: block;
     background-color:lightgray;
 }
-body{
-    background-color:lightgray;
-}
 
-header{
+/* header{
     display:flex;
     background-color: black;
     justify-content: space-between;
     align-items: center;
-}
+} */
 
 .titulo{
   margin: 10px;
