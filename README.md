@@ -17,5 +17,7 @@ Alejandra Ledda
 
 Sasha Adorno - "Mi color favorito es el violeta"
 
+Katherine Fernandez 
+
 # Nombre del Sitio
 
