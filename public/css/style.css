@@ -8,6 +8,7 @@
 
 body {
   background-color:lightgray;
+  max-width: 1200px;
 }
 
 .logo{
@@ -68,7 +69,7 @@ header{
 .navbar{
  background-color: black;
  position: absolute;
- top: 38%;
+ top: 5%;
  width: 100%;
  box-shadow: 0 .5rem .8rem rgba(255, 255, 255, 1);
 }
@@ -99,14 +100,45 @@ header{
 }
 
 .titulo{
-  margin: 10px;
-  padding: 20px;
+  margin: 2rem 0px;;
+  padding: 3px;
   border: #0e0d0d solid;
   text-align: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-h1{
+.titulo h1{
   height: 122px;
+  position: absolute;
+  
+}
+
+.banner-horizontal{
+  width: 95%;
+  height: 500px;
+
+}
+
+.max-conteiner{
+  display: flex;
+  width: 95%;
+  padding: 15px;
+  margin: 0 auto;
+}
+.filtros{
+  background-color: grey;
+  border: #0e0d0d solid;
+  box-shadow: 5px 5px 50px black;
+  margin-right: 10px;
+  width: 27%;
+}
+.secciones{
+  display: flex;
+  flex-grow: 2;
+  flex-direction: column;
 }
 
 .seccion1{
@@ -117,22 +149,54 @@ h1{
 }
 .seccion1,
 .seccion2{
-    margin-bottom:15em;
+    margin-bottom:3em;
     padding: 2em;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
+    
 }
 
 article{
   margin: 0px;
   margin-bottom: 5px;
   padding: 1em;
+  display: flex;
+  flex-direction: column;
+}
+
+h2{
+  text-align: center;
+  font-size: 2rem;
 }
 
 IMG{
-  width: 296px;
+  width: 250px;
 }
+
+.opciones{
+  display: flex;
+  justify-content: space-around;
+}
+
+.opciones p{
+  font-size: 1rem;
+  text-align: left;
+
+}
+
+.buttom{
+  background-color: aqua;
+  height: 15px;
+}
+.oferta{
+  border:solid yellowgreen;
+  box-shadow: 5px 5px 100px yellow;
+
+}
+
+
 /* footer */
 /************************
 
