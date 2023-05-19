@@ -35,7 +35,7 @@ header{
 }
 
 .compra-venta li{
-  color: #0e0d0d;
+  color: #f8f2f2;
   margin: 0 10px;
 }
 
@@ -135,12 +135,47 @@ position: relative;
   padding: 15px;
   margin: 0 auto;
 }
-.filtros{
+
+
+
+.menuPrincipal{
   background-color: grey;
+  
   border: #0e0d0d solid;
   box-shadow: 5px 5px 50px black;
   margin-right: 10px;
-  width: 27%;
+  width: 100%;
+}
+
+.menuPrincipal ul {
+  list-style-type: style type;
+margin: 0;
+padding: 1px 5px;
+
+text-align: center;
+overflow:visible;
+background-color:#329264;
+}
+
+.menuPrincipal li{
+  color:rgb(21, 70, 232);
+  /* float: left; */
+  padding: 1px 5px 1px 5px;
+  text-align: center;
+overflow:visible;
+background-color:#2cbd5c;
+
+}
+
+li:hover {
+  display: block;
+  background-color:rgb(205, 215, 127);
+
+}
+
+li{
+  color:aliceblue;
+  background-color: rgb(2, 0, 11);
 }
 .secciones{
   display: flex;
@@ -240,7 +275,8 @@ footer li{
   margin: 2rem 0;
 }
 .logo-element_footer img{
-  max-height: 75px;
+  max-height: 100px;
+  width: 100px;
   
 }
 .element-footer h5{
