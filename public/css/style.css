@@ -5,24 +5,28 @@
     text-decoration: none;
     box-sizing: border-box;
 }
-
+.logo img{
+  width:6rem;
+  margin-left: 1rem;
+}
 body {
   background-color:lightgray;
-}
-
-.logo{
-  padding: 10px;
-  margin: 10px;
 }
 
 li{
     color:aliceblue
 }
 
-/* compraventa */
+/* compraventa y header */
+header{
+  display:flex;
+  flex-direction: column;
+  background-color: rgb(107, 107, 107);
+  justify-content: space-between;
+}
 .compra-venta{
   position: absolute;
-  right: 0;
+  right: 1rem;
   top: 0;
   display:flex;
   padding: 10px;
@@ -40,63 +44,66 @@ li{
 }
 
 .btn{
-  background:lightgray;
+  background:aquamarine;
   padding: 5px;
   border-radius: 15px;
 }
-.btn:nth-child(1){
-  background-color: aquamarine;
-}
+
 input{
   border-radius: 15px;
   text-indent: 7px;
+  outline: none;
 }
-/* fincompraventa */
- /* nav y header*/
 
-header{
-  display:flex;
-  background-color: black;
-  justify-content: space-between;
-  align-items: center;
-}
-.logo{
-  padding: 10px;
-  margin: 10px;
+/* fincompraventa */
+
+ /* navbar y categoria*/
+
+.barraSuperior{
+  padding: 0 1rem;
 }
 
 .navbar{
- background-color: black;
- position: absolute;
- top: 38%;
+position: relative;
+ background-color: rgb(58, 57, 57);
  width: 100%;
  box-shadow: 0 .5rem .8rem rgba(255, 255, 255, 1);
 }
+
 .navbar ul{
-    margin: 12px;
+    margin: 0 12px;
     display:flex;
 }
 
 .navbar li{
   margin:0 12px; 
+  padding: .7rem;
 }
 
 .navbar li:hover{
-  border: 1px solid #fff;
-  border-radius: 10px;
+  border: .1rem solid #fff;
+  border-radius: .5rem;
 }
-/* finnav */ 
+
 /* categoria */
 
 .categoria ul{
     display: none;
-    position: absolute;
+    position: absolute; 
+    margin: .1rem 0;    
 }
 
-.categoria:hover li{
+.categoria:hover ul{
     display: block;
-    background-color:lightgray;
+    background-color: #eee;
+    border-radius: .5rem;
 }
+.categoria:hover ul li{
+    color: #666;
+}
+/* fin categoria */
+
+ /* fin navbar y categoria*/
 
 .titulo{
   margin: 10px;
@@ -133,6 +140,10 @@ article{
 IMG{
   width: 296px;
 }
+/* fin categorias */
+/* fin navbar */ 
+
+
 /* footer */
 /************************
 
