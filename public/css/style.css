@@ -5,25 +5,9 @@
     text-decoration: none;
     box-sizing: border-box;
 }
-.logo img{
-  width:6rem;
-  margin-left: 1rem;
-}
+
 body {
   background-color:lightgray;
-  max-width: 1200px;
-}
-
-li{
-    color:aliceblue
-}
-
-/* compraventa y header */
-header{
-  display:flex;
-  flex-direction: column;
-  background-color: rgb(107, 107, 107);
-  justify-content: space-between;
 }
 button{
   font-size: 1em;
@@ -38,120 +22,188 @@ button{
 button:hover{
   background-color: rgb(45, 45, 45);
 }
-.compra-venta{
-  position: absolute;
-  right: 1rem;
-  top: 0;
+
+li{
+    color:aliceblue
+}
+
+/* compraventa y header */
+header{
   display:flex;
-  padding: 10px;
-  gap:0 5px;
+  flex-direction: column;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left:0;
+  box-shadow: .1rem 0 .5rem #000;
+  
 }
-
-.compra-venta li{
-  color: #f8f2f2;
-  margin: 0 10px;
+header a,
+.categoria{
+  color: #000;
+  font-weight: 600;
+  text-shadow: 0 0 .5rem rgb(255, 255, 255);
 }
-
-.compra-venta ul{
-  gap: 5px;
-  display:flex;    
+.container{
+  display:flex ;
+  justify-content: space-between;
+  padding: 0 3%;
 }
-
-.btn{
-  background:aquamarine;
-  padding: 5px;
-  border-radius: 15px;
+.logo img{
+  width: 180px;
+  height: 100px; 
+  object-fit: cover;
 }
-
-input{
-  border-radius: 15px;
-  text-indent: 7px;
+.compra-venta{
+  position: relative;
+  display:flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: end;
+}
+.compra-venta i{
+  font-size: 1.5rem;
+  
+  cursor: pointer;
+}
+.compra-venta input{
+  background:transparent;
+  width: 250px;
+  height: 40px;
+  border: none;
   outline: none;
+  border-bottom: 1px solid #000;
+  font-size: 1.1rem;
+  color: white;
+  padding: 0 .5rem;
+  margin-right: -3rem;
+  
+}
+.compra-venta input::placeholder{
+  color: #000;
+}
+.compra-venta ul{
+  display:flex; 
+  gap: 1rem;   
+}
+.compra-venta ul li{
+  font-size: 1.3rem;
 }
 
+.compra-venta ul li a:hover,
+.compra-venta i:hover{
+  color: #fff;
+}
+
+.compra-venta .iniciarSesion{
+  border: .1rem solid #000;
+  box-shadow: 0 0 .5rem rgba(255, 255, 255, .5);
+  border-radius: .5rem; 
+  background-color: rgba(0, 34, 255, 0.5);
+}
+.compra-venta .iniciarSesion a{
+  color:#ffffff;
+  padding: .5rem;
+}
+.compra-venta .iniciarSesion a:hover{
+  color:#e9e7e7;
+  
+}
 /* fincompraventa */
+
 
  /* navbar y categoria*/
 
-.barraSuperior{
-  padding: 0 1rem;
-}
-
 .navbar{
-position: relative;
- background-color: rgb(58, 57, 57);
- width: 100%;
- box-shadow: 0 .5rem .8rem rgba(255, 255, 255, 1);
+ position: relative;
+ display: flex;
+ align-items: center;
 }
 
 .navbar ul{
-    margin: 0 12px;
-    display:flex;
+  display:flex;
 }
 
 .navbar li{
-  margin:0 12px; 
-  padding: .7rem;
+  margin:0 1rem; 
+  font-size:1.3rem ;
+
 }
 
-.navbar li:hover{
-  border: .1rem solid #fff;
-  border-radius: .5rem;
+.navbar li a:hover{
+  color: #fff;
 }
 
 /* categoria */
-
+.categoria{
+  cursor: pointer;
+  position: relative;
+}
+.categoria:hover{
+  color: #fff;
+}
 .categoria ul{
     display: none;
-    position: absolute; 
-    margin: .1rem 0;    
+    position: absolute;    
 }
 
 .categoria:hover ul{
     display: block;
-    background-color: #eee;
-    border-radius: .5rem;
+
 }
 .categoria:hover ul li{
-    color: #666;
+    color: #e3e2e2;
+    padding: .3rem 0 ;
 }
+
 /* fin categoria */
 
  /* fin navbar y categoria*/
 
-.titulo{
-  margin: 2rem 0px;;
-  padding: 3px;
-  border: #0e0d0d solid;
-  text-align: center;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
+
 /* Inicio de Banner */
-.titulo h1{
-  height: 60px;
-  position: absolute;
-  color: white;
-}
+
 #hero{
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  flex-direction: column;
-  height: 90vh;
+  height: 100vh;
+  width: 100%;
   color:white;
-  background-image: linear-gradient(
-    0deg,
-    rgba(0,0,0,0.5),
-    rgba(0,0,0,0.5)
-  )
-  ,url(/image/banner-horizontal-1.webp);
+  background-image:url(../image/banner-horizontal-1.webp);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
+}
+#hero .conteiner{
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: .5rem;
+  text-align: center;
+  padding: 2rem;
+  width: 50%;
+  box-shadow: 1px 0 .5rem rgba(255, 255, 255, 1);
+}
+#hero h1{
+  text-transform: uppercase;
+  font-size: 5rem;
+  color: #ffe600;
+}
+#hero p{
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+  text-transform:capitalize;
+  color: #fff;
+}
+#hero button{
+  width: 150px;
+  background-color: rgb(3, 63, 227);
+  cursor: pointer;
+}
+#hero button:hover{
+  background-color: rgb(3, 66, 240);
+
 }
 /* Fin de Banner */
 
@@ -193,16 +245,16 @@ background-color:#2cbd5c;
 
 }
 
-li:hover {
+/* li:hover {
   display: block;
   background-color:rgb(205, 215, 127);
 
-}
+} */
 
-li{
+/* li{
   color:aliceblue;
   background-color: rgb(2, 0, 11);
-}
+} */
 .secciones{
   display: flex;
   flex-grow: 2;
@@ -239,9 +291,9 @@ h2{
   font-size: 2rem;
 }
 
-IMG{
+/* IMG{
   width: 250px;
-}
+} */
 
 .opciones{
   display: flex;
