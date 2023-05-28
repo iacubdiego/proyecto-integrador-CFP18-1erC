@@ -5,24 +5,42 @@
     text-decoration: none;
     box-sizing: border-box;
 }
-
+.logo img{
+  width:6rem;
+  margin-left: 1rem;
+}
 body {
   background-color:lightgray;
-}
-
-.logo{
-  padding: 10px;
-  margin: 10px;
+  max-width: 1200px;
 }
 
 li{
     color:aliceblue
 }
 
-/* compraventa */
+/* compraventa y header */
+header{
+  display:flex;
+  flex-direction: column;
+  background-color: rgb(107, 107, 107);
+  justify-content: space-between;
+}
+button{
+  font-size: 1em;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 1px solid rgba(0,0,0,0.5);
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+  color: white;
+  background-color: black;
+}
+button:hover{
+  background-color: rgb(45, 45, 45);
+}
 .compra-venta{
   position: absolute;
-  right: 0;
+  right: 1rem;
   top: 0;
   display:flex;
   padding: 10px;
@@ -30,7 +48,7 @@ li{
 }
 
 .compra-venta li{
-  color: #0e0d0d;
+  color: #f8f2f2;
   margin: 0 10px;
 }
 
@@ -40,73 +58,155 @@ li{
 }
 
 .btn{
-  background:lightgray;
+  background:aquamarine;
   padding: 5px;
   border-radius: 15px;
 }
-.btn:nth-child(1){
-  background-color: aquamarine;
-}
+
 input{
   border-radius: 15px;
   text-indent: 7px;
+  outline: none;
 }
-/* fincompraventa */
- /* nav y header*/
 
-header{
-  display:flex;
-  background-color: black;
-  justify-content: space-between;
-  align-items: center;
-}
-.logo{
-  padding: 10px;
-  margin: 10px;
+/* fincompraventa */
+
+ /* navbar y categoria*/
+
+.barraSuperior{
+  padding: 0 1rem;
 }
 
 .navbar{
- background-color: black;
- position: absolute;
- top: 38%;
+position: relative;
+ background-color: rgb(58, 57, 57);
  width: 100%;
  box-shadow: 0 .5rem .8rem rgba(255, 255, 255, 1);
 }
+
 .navbar ul{
-    margin: 12px;
+    margin: 0 12px;
     display:flex;
 }
 
 .navbar li{
   margin:0 12px; 
+  padding: .7rem;
 }
 
 .navbar li:hover{
-  border: 1px solid #fff;
-  border-radius: 10px;
+  border: .1rem solid #fff;
+  border-radius: .5rem;
 }
-/* finnav */ 
+
 /* categoria */
 
 .categoria ul{
     display: none;
-    position: absolute;
+    position: absolute; 
+    margin: .1rem 0;    
 }
 
-.categoria:hover li{
+.categoria:hover ul{
     display: block;
-    background-color:lightgray;
+    background-color: #eee;
+    border-radius: .5rem;
 }
+.categoria:hover ul li{
+    color: #666;
+}
+/* fin categoria */
+
+ /* fin navbar y categoria*/
 
 .titulo{
-  margin: 10px;
-  padding: 20px;
+  margin: 2rem 0px;;
+  padding: 3px;
   border: #0e0d0d solid;
   text-align: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* Inicio de Banner */
+.titulo h1{
+  height: 60px;
+  position: absolute;
+  color: white;
+}
+#hero{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  height: 90vh;
+  color:white;
+  background-image: linear-gradient(
+    0deg,
+    rgba(0,0,0,0.5),
+    rgba(0,0,0,0.5)
+  )
+  ,url(/image/banner-horizontal-1.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+/* Fin de Banner */
+
+.max-conteiner{
+  display: flex;
+  width: 95%;
+  padding: 15px;
+  margin: 0 auto;
 }
 
-h1{
-  height: 122px;
+
+
+.menuPrincipal{
+  background-color: grey;
+  
+  border: #0e0d0d solid;
+  box-shadow: 5px 5px 50px black;
+  margin-right: 10px;
+  width: 100%;
+}
+
+.menuPrincipal ul {
+  list-style-type: style type;
+margin: 0;
+padding: 1px 5px;
+
+text-align: center;
+overflow:visible;
+background-color:#329264;
+}
+
+.menuPrincipal li{
+  color:rgb(21, 70, 232);
+  /* float: left; */
+  padding: 1px 5px 1px 5px;
+  text-align: center;
+overflow:visible;
+background-color:#2cbd5c;
+
+}
+
+li:hover {
+  display: block;
+  background-color:rgb(205, 215, 127);
+
+}
+
+li{
+  color:aliceblue;
+  background-color: rgb(2, 0, 11);
+}
+.secciones{
+  display: flex;
+  flex-grow: 2;
+  flex-direction: column;
 }
 
 .seccion1{
@@ -117,22 +217,54 @@ h1{
 }
 .seccion1,
 .seccion2{
-    margin-bottom:15em;
+    margin-bottom:3em;
     padding: 2em;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
+    
 }
 
 article{
   margin: 0px;
   margin-bottom: 5px;
   padding: 1em;
+  display: flex;
+  flex-direction: column;
+}
+
+h2{
+  text-align: center;
+  font-size: 2rem;
 }
 
 IMG{
-  width: 296px;
+  width: 250px;
 }
+
+.opciones{
+  display: flex;
+  justify-content: space-around;
+}
+
+.opciones p{
+  font-size: 1rem;
+  text-align: left;
+
+}
+
+.buttom{
+  background-color: aqua;
+  height: 15px;
+}
+.oferta{
+  border:solid yellowgreen;
+  box-shadow: 5px 5px 100px yellow;
+
+}
+
+
 /* footer */
 /************************
 
@@ -169,7 +301,8 @@ footer li{
   margin: 2rem 0;
 }
 .logo-element_footer img{
-  max-height: 75px;
+  max-height: 100px;
+  width: 100px;
   
 }
 .element-footer h5{
