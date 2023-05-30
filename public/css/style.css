@@ -8,6 +8,7 @@
 
 body {
   background-color:lightgray;
+
 }
 button{
   font-size: 1em;
@@ -32,11 +33,11 @@ header{
   display:flex;
   flex-direction: column;
   position: absolute;
-  width: 100%;
   top: 0;
   left:0;
   box-shadow: .1rem 0 .5rem #000;
-  
+  width: 100%;
+  font-size: 1.1rem;
 }
 header a,
 .categoria{
@@ -54,6 +55,51 @@ header a,
   height: 100px; 
   object-fit: cover;
 }
+
+/* navbar y categoria*/
+
+.navbar{
+  position: relative;
+  display: flex;
+  align-items: center;
+ }
+ 
+ .navbar ul{
+   display:flex;
+ }
+ 
+ .navbar li{
+   margin:0 1rem; 
+ }
+ 
+ .navbar li a:hover{
+   color: #fff;
+ }
+ /* categoria */
+ .categoria{
+   cursor: pointer;
+   position: relative;
+ }
+ .categoria:hover{
+   color: #fff;
+ }
+ .categoria ul{
+     display: none;
+     position: absolute;    
+ }
+ .categoria:hover ul{
+     display: block;
+ 
+ }
+ .categoria:hover ul li{
+     color: #e3e2e2;
+     padding: .3rem 0 ;
+ }
+ /* fin categoria */
+ 
+  /* fin navbar y categoria*/
+
+  /* inicio compra-venta */
 .compra-venta{
   position: relative;
   display:flex;
@@ -62,13 +108,12 @@ header a,
   justify-content: end;
 }
 .compra-venta i{
-  font-size: 1.5rem;
-  
+  font-size: 1.2rem;
   cursor: pointer;
 }
 .compra-venta input{
   background:transparent;
-  width: 250px;
+  width: 240px;
   height: 40px;
   border: none;
   outline: none;
@@ -77,17 +122,15 @@ header a,
   color: white;
   padding: 0 .5rem;
   margin-right: -3rem;
-  
 }
+
 .compra-venta input::placeholder{
   color: #000;
 }
 .compra-venta ul{
   display:flex; 
-  gap: 1rem;   
-}
-.compra-venta ul li{
-  font-size: 1.3rem;
+  gap: 1rem; 
+  align-items: center;  
 }
 
 .compra-venta ul li a:hover,
@@ -96,88 +139,38 @@ header a,
 }
 
 .compra-venta .iniciarSesion{
-  border: .1rem solid #000;
+  border: .1rem solid #666;
   box-shadow: 0 0 .5rem rgba(255, 255, 255, .5);
   border-radius: .5rem; 
-  background-color: rgba(0, 34, 255, 0.5);
+  background-color: rgba(0, 34, 255, 0.7);
+  padding: .5rem;
+  cursor: pointer;
 }
 .compra-venta .iniciarSesion a{
   color:#ffffff;
-  padding: .5rem;
 }
-.compra-venta .iniciarSesion a:hover{
-  color:#e9e7e7;
+.compra-venta .iniciarSesion:hover{
+  background-color: rgba(0, 34, 255, 1);
   
 }
 /* fincompraventa */
 
-
- /* navbar y categoria*/
-
-.navbar{
- position: relative;
- display: flex;
- align-items: center;
-}
-
-.navbar ul{
-  display:flex;
-}
-
-.navbar li{
-  margin:0 1rem; 
-  font-size:1.3rem ;
-
-}
-
-.navbar li a:hover{
-  color: #fff;
-}
-
-/* categoria */
-.categoria{
-  cursor: pointer;
-  position: relative;
-}
-.categoria:hover{
-  color: #fff;
-}
-.categoria ul{
-    display: none;
-    position: absolute;    
-}
-
-.categoria:hover ul{
-    display: block;
-
-}
-.categoria:hover ul li{
-    color: #e3e2e2;
-    padding: .3rem 0 ;
-}
-
-/* fin categoria */
-
- /* fin navbar y categoria*/
-
-
-
 /* Inicio de Banner */
 
-#hero{
+.banner{
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
   width: 100%;
   color:white;
   background-image:url(../image/banner-horizontal-1.webp);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
+  background-size: 100% 100%;
+  background-position: left center;
+  background-repeat: no-repeat
+  
 }
-#hero .conteiner{
+.banner .conteiner{
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: .5rem;
   text-align: center;
@@ -185,23 +178,23 @@ header a,
   width: 50%;
   box-shadow: 1px 0 .5rem rgba(255, 255, 255, 1);
 }
-#hero h1{
+.banner h1{
   text-transform: uppercase;
   font-size: 5rem;
   color: #ffe600;
 }
-#hero p{
+.banner p{
   margin-bottom: 2rem;
   font-size: 1.1rem;
   text-transform:capitalize;
   color: #fff;
 }
-#hero button{
+.banner button{
   width: 150px;
   background-color: rgb(3, 63, 227);
   cursor: pointer;
 }
-#hero button:hover{
+.banner button:hover{
   background-color: rgb(3, 66, 240);
 
 }
@@ -211,18 +204,13 @@ header a,
   display: flex;
   width: 95%;
   padding: 15px;
-  margin: 0 auto;
 }
-
-
 
 .menuPrincipal{
   background-color: grey;
   
   border: #0e0d0d solid;
   box-shadow: 5px 5px 50px black;
-  margin-right: 10px;
-  width: 100%;
 }
 
 .menuPrincipal ul {
@@ -270,14 +258,18 @@ background-color:#2cbd5c;
 .seccion1,
 .seccion2{
     margin-bottom:3em;
-    padding: 2em;
+    padding: 2em 0;
     display: flex;
-    justify-content: space-around;
+    
     align-items: center;
     flex-wrap: wrap;
     
 }
-
+.seccion1 article img,
+.seccion2 article img{
+  width: 12rem;
+  height: 10rem;
+}
 article{
   margin: 0px;
   margin-bottom: 5px;
@@ -342,7 +334,7 @@ footer li{
   display: grid;
   grid-template-columns: 30% 15% 15% 20%;
   column-gap: 5%;
-  padding: 1rem;
+
   margin: 2rem auto;
   max-width: 1200px;
   /*web de autospot y titulos */
@@ -397,4 +389,17 @@ footer li{
 .legal-creds ul a{
   color: #e4d9d7;
   font-size: .9rem;
+}
+
+
+@media (max-width:1300px){
+
+  .navbar{
+    position: absolute;
+    top: 110%;
+  }
+  .logo img{
+    width: 150px;
+  }
+
 }
