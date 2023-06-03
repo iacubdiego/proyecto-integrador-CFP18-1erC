@@ -13,11 +13,12 @@ app.set('views', __dirname +'/views');
 app.set('view engine', 'ejs');
 
 app.use('/',mainRoutes)
-
-// app.get('/', function (req, res) {
-//   res.sendFile(path.join(__dirname, 'views/index.html'))
-// })
-
+/* veo que pasa */
+/*
+ app.get('/', function (req, res) {
+  res.sendFile(path.join(__dirname, 'views/index.ejs'))
+ })
+*/
 app.listen(PORT, () => {
   console.log('http://localhost:'+PORT);
 });
