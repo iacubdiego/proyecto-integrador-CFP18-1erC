@@ -7,66 +7,73 @@
 
 <%- include("./partials/header") %>
 
-<div>
-<p> <%= products %>
-</p>
-</div>
-  <!-- Banner-->
-  <section>
-    <div class="banner">
-      <div class="conteiner">
-        <h1>Ahorra un 50%</h1>
-        <p>en el primer año del seguro</p>
-        <button>Ver más</button>
-      </div>
+<!-- Banner-->
+<section>
+  <div class="banner">
+    <div class="conteiner">
+      <h1>Ahorra un 50%</h1>
+      <p>en el primer año del seguro</p>
+      <button>Ver más</button>
     </div>
-  </section>
+  </div>
+</section>
 
-  <div class="max-conteiner">
-    <div>
-      <section class="menuPrincipal">
-        <ul>
-          <li>
-            <h2>MENU</h2>
-          </li>
-
-          <li>
-            <h3><a href="#">Modelo</a></h3>
-          </li>
-          <li>
-            <h3><a href="#">Kilometros</a></h3>
-          </li>
-          <li>
-            <h3><a href="#">Marca</a></h3>
-          </li>
-          <li>
-            <h3><a href="#">Precio</a></h3>
-          </li>
-          <li>
-            <h3><a href="#">Año</a></h3>
-          </li>
-          <li>
-            <h3><a href="#">Combustible</a></h3>
-          </li>
-          <li>
-            <h3><a href="#">Puertas</a></h3>
-          </li>
-          <li>
-            <h3><a href="#">Carroceria</a></h3>
-          </li>
-          <li>
-            <h3><a href="#">Color</a></h3>
-          </li>
-          <li>
-            <h3><a href="#">Financiamiento</a></h3>
-          </li>
-
-        </ul>
-      </section>
-    </div>
-    <div class="secciones">
-      <section class="seccion1">
-        <article>
+<div class="max-conteiner">
+  <div>
+    <section class="menuPrincipal">
+      <ul>
+        <li>
+          <h2>MENU</h2>
+        </li>
+        
+        <li>
+          <h3><a href="#">Modelo</a></h3>
+        </li>
+        <li>
+          <h3><a href="#">Kilometros</a></h3>
+        </li>
+        <li>
+          <h3><a href="#">Marca</a></h3>
+        </li>
+        <li>
+          <h3><a href="#">Precio</a></h3>
+        </li>
+        <li>
+          <h3><a href="#">Año</a></h3>
+        </li>
+        <li>
+          <h3><a href="#">Combustible</a></h3>
+        </li>
+        <li>
+          <h3><a href="#">Puertas</a></h3>
+        </li>
+        <li>
+          <h3><a href="#">Carroceria</a></h3>
+        </li>
+        <li>
+          <h3><a href="#">Color</a></h3>
+        </li>
+        <li>
+          <h3><a href="#">Financiamiento</a></h3>
+        </li>
+        
+      </ul>
+    </section>
+  </div>
+  <div class="secciones">
+    <section class="seccion1">
+      <article>
+          <div>
+            <% for(let index=0; index < productList.length; index++) { %>
+              <!-- <a href="/detalle/ productList[index].id "> -->
+                <h2><%= productList[index].nombre %></h2>
+                <p class="opciones">
+                  <%= productList[index].descripcion %>
+                  <%= productList[index].precio %>
+                </p>
+            <% } %>
+          
+          </div>
 
           <h2>Peugeot 308</h2>
           <img src="https://i.postimg.cc/PfLckDPy/autoblanco.jpg" alt="detalleProducto" />

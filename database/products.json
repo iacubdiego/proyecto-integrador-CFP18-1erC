@@ -1,7 +1,6 @@
 [
 {
     "ide": "1",
-    "imagen": "https://i.postimg.cc/PfLckDPy/autoblanco.jpg" alt="detalleProducto",
     "nombre" : "Auto Blanco",
     "precio" : "20000",
     "enVenta" : "true"

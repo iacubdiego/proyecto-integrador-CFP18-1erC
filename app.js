@@ -1,18 +1,17 @@
-const path = require('path')
 const express = require('express')
-
 const app = express()
+const path = require('path')
 
 const PORT = process.env.PORT || 3006
-
 const mainRoutes = require('./routes/mainRoutes')
-
-app.use(express.static('public'));
 
 app.set('views', __dirname +'/views');
 app.set('view engine', 'ejs');
 
 app.use('/',mainRoutes)
+
+// configuarcion de public static
+app.use(express.static('public'));
 
 // app.get('/', function (req, res) {
 //   res.sendFile(path.join(__dirname, 'views/index.html'))
