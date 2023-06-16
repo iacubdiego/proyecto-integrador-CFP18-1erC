@@ -1,11 +1,37 @@
 [
-{
-    "ide": "1",
-    "imagen": "https://i.postimg.cc/PfLckDPy/autoblanco.jpg" alt="detalleProducto",
-    "nombre" : "Auto Blanco",
-    "precio" : "20000",
-    "enVenta" : "true"
-
-}
-
+  {
+    "id": "1",
+    "nombre": "Auto Blanco",
+    "descripcion": "Mejor motor del mercado",
+    "precio": "20000",
+    "enVenta": "Vendido"
+  },
+  {
+    "id": "2",
+    "nombre": "Auto Blanco",
+    "descripcion": "El mas Buscado",
+    "precio": "20000",
+    "enVenta": "Vendido"
+  },
+  {
+    "id": "3",
+    "nombre": "Auto Blanco",
+    "descripcion": "5 ptas, baul ancho",
+    "precio": "20000",
+    "enVenta": "No Vendido"
+  },
+  {
+    "ID": "8",
+    "nombre": "sds",
+    "descripcion": "sds",
+    "precio": "sdsd",
+    "enVenta": "sd"
+  },
+  {
+    "ID": "10",
+    "nombre": "jkgj",
+    "descripcion": "ksjdfsj",
+    "precio": "OSISDF",
+    "enVenta": "SOFISFISDF"
+  }
 ]
