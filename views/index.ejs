@@ -64,14 +64,17 @@
     <section class="seccion1">
       <article>
           <div>
-            <% for(let index=0; index < productList.length; index++) { %>
-              <!-- <a href="/detalle/ productList[index].id "> -->
-                <h2><%= productList[index].nombre %></h2>
+            <% for(let index=0; index < products.length; index++) { %>
+              <!-- <a href="/detalle/ products[index].id "> -->
+                <h2><%= products[index].nombre %></h2>
                 <p class="opciones">
-                  <%= productList[index].descripcion %>
-                  <%= productList[index].precio %>
+                  <%= products[index].precio %>
+                  <%= products[index].enVenta %>
                 </p>
+                <a href="products/<%= products[index].id %>" >Detalle</a>
+                
             <% } %>
+            <h1><a href="/products/create" >Crear</a></h1>
           
           </div>
 
