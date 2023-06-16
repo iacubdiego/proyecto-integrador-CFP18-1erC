@@ -12,14 +12,6 @@ app.set('view engine', 'ejs');
 
 const mainRoutes = require('./routes/mainRoutes')
 app.use('/',mainRoutes)
-<<<<<<< HEAD
-/* veo que pasa */
-/*
- app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, 'views/index.ejs'))
- })
-*/
-=======
 
 const productsRoutes = require('./routes/productsRoutes')
 app.use('/products',productsRoutes)
@@ -31,7 +23,6 @@ app.use(express.static('public'));
 //   res.sendFile(path.join(__dirname, 'views/index.html'))
 // })
 
->>>>>>> 682f8c030acbecfc7df58aa007c8661a51be52aa
 app.listen(PORT, () => {
   console.log('http://localhost:'+PORT);
 });
