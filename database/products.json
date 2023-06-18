@@ -1,37 +1,58 @@
 [
   {
     "id": "1",
-    "nombre": "Auto Blanco",
-    "descripcion": "Mejor motor del mercado",
+    "nombre": "Fiat Cronos",
+    "descripcion": "El mas vendido del año",
     "precio": "20000",
-    "enVenta": "Vendido"
+    "enVenta": "En venta"
   },
   {
     "id": "2",
-    "nombre": "Auto Blanco",
+    "nombre": "Toyota Hilux",
     "descripcion": "El mas Buscado",
     "precio": "20000",
-    "enVenta": "Vendido"
+    "enVenta": "En venta"
   },
   {
     "id": "3",
-    "nombre": "Auto Blanco",
-    "descripcion": "5 ptas, baul ancho",
+    "nombre": "Volkswagen Amarok",
+    "descripcion": "Muy resistente",
     "precio": "20000",
-    "enVenta": "No Vendido"
+    "enVenta": "En venta"
   },
   {
-    "ID": "8",
-    "nombre": "sds",
-    "descripcion": "sds",
-    "precio": "sdsd",
-    "enVenta": "sd"
+    "id": "8",
+    "nombre": "Chevrolet Onix",
+    "descripcion": "Comodo y seguro",
+    "precio": "18000",
+    "enVenta": "En Venta"
   },
   {
-    "ID": "10",
-    "nombre": "jkgj",
-    "descripcion": "ksjdfsj",
-    "precio": "OSISDF",
-    "enVenta": "SOFISFISDF"
+    "id": "10",
+    "nombre": "Volkswagen Gol",
+    "descripcion": "El mas buscado",
+    "precio": "12000",
+    "enVenta": "En venta"
+  },
+  {
+    "id": "11",
+    "nombre": "Ford Ka",
+    "descripcion": "Muy familiar",
+    "precio": "8000",
+    "enVenta": "En venta"
+  },
+  {
+    "id": "12",
+    "nombre": "Chevrolet Tracker",
+    "descripcion": "Un Suv super comodo",
+    "precio": "120000",
+    "enVenta": "enVenta"
+  },
+  {
+    "id": "12",
+    "nombre": "Renault Sandero",
+    "descripcion": "Ideal para la familia",
+    "precio": "16000",
+    "enVenta": "enVenta"
   }
 ]

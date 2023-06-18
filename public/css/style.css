@@ -207,12 +207,14 @@ header a,
 }
 
 .menuPrincipal{
-  background-color: grey;
+  background-color: black;
   
   border: #0e0d0d solid;
   box-shadow: 5px 5px 50px black;
 }
-
+.menuPrincipal h3:hover{
+  background-color: #7d9232;
+}
 .menuPrincipal ul {
   list-style-type: style type;
 margin: 0;
@@ -229,7 +231,27 @@ background-color:#329264;
   padding: 1px 5px 1px 5px;
   text-align: center;
 overflow:visible;
-background-color:#2cbd5c;
+background-color:#1476d8;
+
+}
+/*------------------*/
+.menuProducto ul {
+  list-style-type: style type;
+margin: 0;
+padding: 1px 5px;
+
+text-align: center;
+overflow:visible;
+background-color:#7d9232;
+}
+
+.menuProducto li{
+  color:rgb(232, 21, 229);
+  /* float: left; */
+  padding: 1px 5px 1px 5px;
+  text-align: center;
+overflow:visible;
+background-color:#b1bd2c;
 
 }
 
@@ -243,6 +265,17 @@ background-color:#2cbd5c;
   color:aliceblue;
   background-color: rgb(2, 0, 11);
 } */
+.vehiculos2{
+  background-color: #329264;
+  margin: 10px;
+  margin-bottom: 5px;
+  padding: 1em;
+  display: flex;
+  
+  width: 200px;
+  height: 250px;
+}
+
 .secciones{
   display: flex;
   flex-grow: 2;
@@ -256,6 +289,7 @@ background-color:#2cbd5c;
     background-color: rgb(54, 84, 139);
 }
 .seccion1,
+.vehiculos,
 .seccion2{
     margin-bottom:3em;
     padding: 2em 0;
@@ -264,8 +298,13 @@ background-color:#2cbd5c;
     align-items: center;
     flex-wrap: wrap;
     
+    
 }
+
+
+
 .seccion1 article img,
+.vehiculos article img,
 .seccion2 article img{
   width: 12rem;
   height: 10rem;
@@ -277,18 +316,64 @@ article{
   display: flex;
   flex-direction: column;
 }
+.vehiculos_imagenes{
+  display: flex;
+  flex-grow: 2;
+  flex-direction:row;
+  
+  margin: 10px;
+  margin-bottom: 5px;
+  padding: 1em;
+   
+  width: 200px;
+  height: 250px;
+  background-color: #329264;
+  margin: 10px;
+ 
+  
+  
+  
+}
+
+
+
+
+
+
 
 h2{
   text-align: center;
-  font-size: 2rem;
+  font-size: 1rem;
+  color: #e3e2e2;
 }
-
+h3{
+  color: white;
+}
+h4{
+  color: red;
+}
+h5{
+  color: black;
+}
+a{
+  color: black;
+}
+b{
+  color: #e3df05;
+}
+p{
+  color: #e3e2e2;
+}
+c{
+  color: white;
+}
 /* IMG{
   width: 250px;
 } */
 
 .opciones{
   display: flex;
+  
   justify-content: space-around;
 }
 
@@ -305,10 +390,30 @@ h2{
 .oferta{
   border:solid yellowgreen;
   box-shadow: 5px 5px 100px yellow;
+  display: flex;
+ 
+  flex-direction:column;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  margin-bottom: 5px;
+  padding: 1em;
+   
+  width: 300px;
+  height: 300px;
+  background-color: #329264;
+  margin: 10px;
+ 
+  
 
 }
-
-
+/*
+.vehiculos{
+  background-color: #7d9232;
+  display: flex;
+  max-width: 1200px;
+}
+*/
 /* footer */
 /************************
 

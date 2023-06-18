@@ -1,29 +1,29 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en">
 
-<%- include("../partials/head"); %> 
+<%- include("./partials/head") %> 
 
 <body>
 
-<%- include("../partials/header"); %>
+<%- include("./partials/header") %>
 
 <!-- Banner-->
-<section>
-  <div class="banner">
-    <div class="conteiner">
-      <h1>Ahorra un 50%</h1>
-      <p>en el primer año del seguro</p>
-      <button>Ver más</button>
-    </div>
-  </div>
-</section>
+      <section>
+            <div class="banner">
+                <div class="conteiner">
+                    <h1>Ahorra un 50%</h1>
+                        <p>en el primer año del seguro</p>
+                        <button>Ver más</button>
+                </div>
+            </div>
+      </section>
 
 <div class="max-conteiner">
-  <div>
+  
     <section class="menuPrincipal">
       <ul>
         <li>
-          <h2>MENU</h2>
+          <h3>MENU</h3>
         </li>
         
         <li>
@@ -56,89 +56,161 @@
         <li>
           <h3><a href="#">Financiamiento</a></h3>
         </li>
-        
-      </ul>
-    </section>
-  </div>
+              <li>
+                  <ul>
+
+                  </ul>
+                  <ul>--------------</ul>
+                    <section class="menuProducto"></section>
+                          <h3>MENU DEL PRODUCTO</h3>
+                </li>
+
+                <li>
+          
+                      <h3><a href="/products/create" >Crear</a></h3>    <!--modifico la opcion-->
+                </li>
+
+                <li>
+          
+                      <h3><a href="/products/edit/id" >Editar segun Id</a></h3> <!--modifico la opcion-->
+                </li>
+
+                <li>
+                      <h3><a href="#">Borrar</a></h3>
+                          <!--modifico la opcion-->
+                </li>
+
+                <li>
+                      <h3><a href="#">Mostrar todos</a></h3>
+                </li>
+      </ul> <!-- ok -->
+    </section> <!--fin class="menuPrincipal-->
+  
+  
+  
+        <!-- NUEVO MENU DE EDICION DEL PRODUCTO-->
+
+
+        <!-- FIN DEL MENU DE EDICION DEL PRODUCTO-->
+
   <div class="secciones">
     <section class="seccion1">
-      <article>
-          <div>
+      <!-- <article> -->
+        
+      
+          <div class = "vehiculos">
             <% for(let index=0; index < products.length; index++) { %>
-              <!-- <a href="/detalle/ products[index].id "> -->
-                <h2><%= products[index].nombre %></h2>
-                <p class="opciones">
-                  <%= products[index].precio %>
-                  <%= products[index].enVenta %>
-                </p>
-                <a href="products/<%= products[index].id %>" >Detalle</a>
-                
+               <a href="/detalle/ products[index].id "> 
+               <div class = "vehiculos2">
+                <article>
+                           
+                  <p class="opciones">
+                      <button>
+                          <h3><%= products[index].nombre %></h3>
+                    </button>
+                          <h4>Id: <%= products[index].id %></h4>
+                          <h5>Descripcion: <%= products[index].descripcion %></h5>
+                          <h5>Precio: <%= products[index].precio %></h5>
+                          <h5>Condicion: <%= products[index].enVenta %></h5>
+                          <h3><b href="products/<%= products[index].id %>" >Detalle</b></h3>
+
+                  </p>
+             
+               </article>
+              </div>
+                               
             <% } %>
-            <h1><a href="/products/create" >Crear</a></h1>
-          
-          </div>
+      
 
-          <h2>Peugeot 308</h2>
-          <img src="https://i.postimg.cc/PfLckDPy/autoblanco.jpg" alt="detalleProducto" />
-          <div class="opciones">
-            <p>Precio</p>
-            <button>Comprar</button>
-          </div>
-        </article>
+          </div> <!-- fin class = "vehiculos" -->
+          <!-- fin class vehiculos -->
+          <!-- </article>-->
 
-        <article>
-          <div>
-            <h2>Volkswagen Golf</h2>
-            <img src="https://i.postimg.cc/NLqm3SL3/autorojo.jpg" alt="detalleProducto" />
-            <p>Precio</p>
-            <button>Comprar</button>
-          </div>
-        </article>
+          <div class="vehiculos_imagenes"> 
+              <article>
+                  <div>
+                    <button><h2>Peugeot 308 XRE</h2></button>
+                        <img src="https://i.postimg.cc/PfLckDPy/autoblanco.jpg" alt="detalleProducto" />
+                      
+                        <p>Precio</p>
+                        <button>Comprar</button>
+                  </div>
+              </article>
 
-        <article>
-          <div>
-            <h2>Ford Ecosport 2.0</h2>
-            <img src="https://i.postimg.cc/Y2JP2SFH/autonaranja.jpg" alt="detalleProducto" />
-            <p>Precio</p>
-            <button>Comprar</button>
-          </div>
-        </article>
-        <article>
-          <div class="oferta">
-            <h2>Mercedes Benz Urban</h2>
-            <img src="https://i.postimg.cc/KvBH1y7g/autocolorcafe.jpg" alt="detalleproducto" />
-            <p>Precio</p>
-            <button>Consultar Precio</button>
-          </div>
-        </article>
+              <article>
+                  <div>
+                    <button><h2>Volkswagen Golf</h2></button>
+                        <img src="https://i.postimg.cc/NLqm3SL3/autorojo.jpg" alt="detalleProducto" />
+                        <p>Precio</p>
+                        <button>Comprar</button>
+                  </div>
+              </article>
 
-      </section>
-      <section class="seccion2">
-        <article>
-          <img src="https://i.postimg.cc/RVPxSmvQ/nofoto.jpg" alt="productoALaVenta" />
-          <p>Producto a la venta</p>
-          <button>Comprar</button>
-        </article>
-        <article>
-          <img src="https://i.postimg.cc/RVPxSmvQ/nofoto.jpg" alt="productoALaVenta" />
-          <p>Producto a la venta</p>
-          <button>Comprar</button>
-        </article>
-        <article>
-          <img src="https://i.postimg.cc/RVPxSmvQ/nofoto.jpg" alt="productoALaVenta" />
-          <p>Producto a la venta</p>
-          <button>Comprar</button>
-        </article>
-        <article>
-          <img src="https://i.postimg.cc/RVPxSmvQ/nofoto.jpg" alt="Producto a la venta" />
-          <p>Producto a la venta</p>
-          <button>Comprar</button>
-        </article>
-      </section>
+              <article>
+                  <div>
+                    <button> <h2>Ford Ecosport 2.0</h2></button>
+                        <img src="https://i.postimg.cc/Y2JP2SFH/autonaranja.jpg" alt="detalleProducto" />
+                      <p>Precio</p>
+                      <button>Comprar</button>
+                  </div>
+              </article>
+            
+           
+          </div> <!-- fin class = "vehiculos_imagenes" -->  
+          <article>
+            <div class="oferta">
+                <h2>Mercedes Benz Urban</h2>
+                  <img src="https://i.postimg.cc/KvBH1y7g/autocolorcafe.jpg" alt="detalleproducto" />
+                  <p>Precio</p>
+                <button>Consultar Precio</button>
+            </div>
+        </article> 
+        
+    </section><!-- fin class = seccion1 -->
+    <!-- fin de primera seccion y comienzo de la segunda seccion -->
+      
+    <section class="seccion2">
+      <article>
+        <img src="./image/Auto1.JPG" alt="productoALaVenta" />
+        <p>Producto a la venta</p>
+        <button>Comprar</button>
+      </article>
+      <article>
+        <img src="./image/Auto2.JPG" alt="productoALaVenta" />
+        <p>Producto a la venta</p>
+        <button>Comprar</button>
+      </article>
+      <article>
+        <img src="./image/Auto3.JPG" alt="productoALaVenta" />
+        <p>Producto a la venta</p>
+        <button>Comprar</button>
+      </article>
+      <article>
+        <img src="./image/Auto4.JPG" alt="Producto a la venta" />
+        <p>Producto a la venta</p>
+        <button>Comprar</button>
+      </article>
+      <article>
+        <img src="./image/Auto5.JPG" alt="productoALaVenta" />
+        <p>Producto a la venta</p>
+        <button>Comprar</button>
+      </article>
+      <article>
+        <img src="./image/Auto6.JPG" alt="Producto a la venta" />
+        <p>Producto a la venta</p>
+        <button>Comprar</button>
+      </article>
+    </section>
+
+
+
+    <!-- Fin de 2da Seccion-->
+  </div> <!-- fin seccion class="secciones-->
+      
     </div>
   </div>
 
-  <%- include("../partials/footer"); %>
+  <%- include("./partials/footer") %>
 
 </body>
 
