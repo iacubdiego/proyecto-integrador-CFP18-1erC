@@ -6,7 +6,7 @@ const productsController = require('../controllers/productsController')
 // muestra todos los productos
 productsRoutes.get('/', productsController.mostrarProductos)
 // muestra un pruducto segun el id
-productsRoutes.get('/detalle/:id', productsController.detalleById);
+productsRoutes.get('/detalleProduct/:id', productsController.detalleById);
 // crea un producto y lo guarda mediante el metodos POST
 productsRoutes.get('/create',productsController.createProduct)
 productsRoutes.post('/',productsController.storeProduct)

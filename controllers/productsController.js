@@ -11,7 +11,9 @@ const productsController = {
     },
     detalleById : (req,res)=>{
         let id = req.params.id;
-        res.send("Get product by ID" + id);
+        // res.send("Get product by ID" + id);
+       // res.render("products/createProducts");
+       res.render("products/detalleById"+id);
     },
     // crea un producto y lo guarda
     createProduct : (req , res) => {

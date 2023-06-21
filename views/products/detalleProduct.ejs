@@ -1,0 +1,16 @@
+<article>
+                           
+    <p class="opciones">
+        <button>
+            <h3><%= products.nombre %></h3>
+      </button>
+            <h4>Id: <%= products.id %></h4>
+            <h5>Descripcion: <%= products.descripcion %></h5>
+            <h5>Precio: <%= products.precio %></h5>
+            <h5>Condicion: <%= products.enVenta %></h5>
+            <h3><a href="/products/edit/<%= products.id %>" >Editar</a></h3>
+            <h3><a href="/products/edit/<%= products.id %>" >Eliminar</a></h3>
+
+    </p>
+
+ </article>

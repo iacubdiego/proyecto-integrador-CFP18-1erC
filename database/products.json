@@ -54,5 +54,13 @@
     "descripcion": "Ideal para la familia",
     "precio": "16000",
     "enVenta": "enVenta"
+  },
+  {
+    "id": "13",
+    "nombre": "Ford",
+    "descripcion": "Focus",
+    "precio": "18000",
+    "enVenta": "enVenta"
   }
+  
 ]

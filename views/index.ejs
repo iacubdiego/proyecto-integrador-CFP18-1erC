@@ -100,8 +100,10 @@
       
           <div class = "vehiculos">
             <% for(let index=0; index < products.length; index++) { %>
-               <a href="/detalle/ products[index].id "> 
-               <div class = "vehiculos2">
+              
+            <!-- <a href="/detalle/products[index].id ">  -->
+               
+                <div class = "vehiculos2">
                 <article>
                            
                   <p class="opciones">
@@ -112,7 +114,10 @@
                           <h5>Descripcion: <%= products[index].descripcion %></h5>
                           <h5>Precio: <%= products[index].precio %></h5>
                           <h5>Condicion: <%= products[index].enVenta %></h5>
-                          <h3><b href="products/<%= products[index].id %>" >Detalle</b></h3>
+                          
+                          <h3><a href="./products/detalleProduct/<%= products[index].id %>" >Detalle</a></h3>
+                       
+
 
                   </p>
              
