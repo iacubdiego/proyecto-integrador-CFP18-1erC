@@ -21,12 +21,15 @@ const productsController = {
 
     },
     */
-    detalleById : (req , res) => {
-        let id = req.params.id;
-        let product = productList.find(product => product.id == id);
-        res.render("products/detalleProduct", {product : product});
-        
-    },
+    detailById : (req,res)=>{
+        //muestra el detalle de un producto especifico.
+        const id = req.params.id;
+        //buscamos en el array el producto que coincida con el que llega por parametro.
+        const filteredProduct = productList.find((product) => {
+          return product.id == id;
+        });
+           res.render("products/detail", {filteredProduct});
+        },
     // crea un producto y lo guarda
     createProduct : (req , res) => {
         res.render("products/createProducts");
@@ -40,9 +43,11 @@ const productsController = {
     //------------------------
     // edita un producto y hace un update
     editProduct : (req , res) => {
-        let id = req.params.id;
-        let product = productList.find(product => product.id == id);
-        res.render("products/editProduct", {product : product});
+        const id = req.params.id;
+        const filteredProduct = productList.find((product) => {
+            return product.id == id;
+        });
+        res.render("products/edit", {product : filteredProduct});
         
     },
     updateProduct : (req , res) => {
@@ -67,34 +72,7 @@ const productsController = {
         let product = productList.find(product => product.id == id);
         res.render("products/deleteProduct", {product : product});
     
-    },
-    storeProduct : (req , res) => {
-        let product = req.body;
-        productList.push(product);
-        fs.writeFileSync(productListPath,JSON.stringify(productList,null,2));
-        res.redirect("/products");
-    },
-    //------------------------
-
-/*
-    deleteProduct : (req,res) => {
-        let id = req.params.id;
-
-        console.log('deleteProduct' + id);
-
-        for (let index = 0; index < productList.length; index++) {
-            const elements = productList[index];
-            if (elements.id == id){
-                productList.splice(index, 1);
-            }
-        }
-
-        fs.readFileSync(productListPath,JSON.stringify(productList,null,2));
-        res.redirect("/products");
     }
-    */
-    //-----------------------------------
-
 }
 
 module.exports = productsController;

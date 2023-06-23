@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <%- include("./partials/head") %> 
@@ -120,9 +120,10 @@
                           <h5>Precio: <%= products[index].precio %></h5>
                           <h5>Condicion: <%= products[index].enVenta %></h5>
                           
-                          <h4><a style="background-color: rgb(127, 255, 138);"href="products/detalleProducto/:id"<%= products[index].id %>" >Detalle</a></h4>
-                          <h4><a style="background-color: rgb(11, 201, 96);"href="/products/edit/:id/"<%= products[index].id %>" >Editar</a></h4>
-                          <h4><a style="background-color: rgb(156, 19, 184);"href="/products/delete/:id"<%= products[index].id %>" >Borrar</a></h4>
+
+                          <h4><a style="background-color: rgb(127, 255, 138);"href="/products/detail/<%= products[index].id %>" >Detalle</a></h4>
+                          <h4><a style="background-color: rgb(11, 201, 96);"href="/products/edit/<%= products[index].id %>" >Editar</a></h4>
+                          <h4><a style="background-color: rgb(156, 19, 184);"href="/products/delete/<%= products[index].id %>" >Borrar</a></h4>
                           
                           
                           

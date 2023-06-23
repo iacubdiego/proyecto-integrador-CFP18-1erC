@@ -1,0 +1,10 @@
+<h1>Editar Producto</h1>
+<form action="/products/edit/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+    <input type="text" name="id" placeholder="id" value="<%= product.id%>">
+    <input type="text" name="nombre" placeholder="nombre" value="<%= product.nombre%>">
+    <input type="text" name="descripcion" placeholder="descripcion" value="<%= product.descripcion%>">
+    <input type="text" name="precio" placeholder="precio" value="<%= product.precio%>">
+    <input type="text" name="enVenta" placeholder="enVenta" value="<%= product.enVenta%>">
+    <br>
+    <button type="submit">Modificar</button>
+</form>

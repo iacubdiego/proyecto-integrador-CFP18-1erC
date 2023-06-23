@@ -1,0 +1,13 @@
+<article>                          
+    <p class="opciones">
+        <button>
+            <h3><%= filteredProduct.nombre %></h3>
+      </button>
+            <h4>Id: <%= filteredProduct.id %></h4>
+            <h5>Descripcion: <%= filteredProduct.descripcion %></h5>
+            <h5>Precio: <%= filteredProduct.precio %></h5>
+            <h5>Condicion: <%= filteredProduct.enVenta %></h5>
+            <h3><a href="/products/edit/<%= filteredProduct.id %>" >Editar</a></h3>
+            <h3><a href="/products/edit/<%= filteredProduct.id %>" >Eliminar</a></h3>
+    </p>
+ </article>
