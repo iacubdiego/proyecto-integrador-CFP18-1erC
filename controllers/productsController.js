@@ -9,18 +9,6 @@ const productsController = {
     mostrarProductos : (req,res)=>{
         res.render("index", { products : productList })
     },
-    /*
-    detalleById : (req , res) => {
-        let id = req.params.id;
-        // res.send("Get product by ID" + id);
-       // res.render("products/createProducts");
-       // res.render("products/detalleProduct"+id);
-       let id = req.params.id;
-        let product = productList.find(product => product.id == id);
-        res.render("products/detalleProduct", {product : product});
-
-    },
-    */
     detailById : (req,res)=>{
         //muestra el detalle de un producto especifico.
         const id = req.params.id;

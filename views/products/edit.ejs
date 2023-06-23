@@ -1,5 +1,5 @@
 <h1>Editar Producto</h1>
-<form action="/products/edit/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+<form action="/products/edit/<%= product.id %>?_method=PUT" method="PUT" enctype="multipart/form-data">
     <input type="text" name="id" placeholder="id" value="<%= product.id%>">
     <input type="text" name="nombre" placeholder="nombre" value="<%= product.nombre%>">
     <input type="text" name="descripcion" placeholder="descripcion" value="<%= product.descripcion%>">

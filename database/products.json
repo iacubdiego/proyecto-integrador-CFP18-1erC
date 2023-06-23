@@ -89,5 +89,20 @@
     "descripcion": "Mustang",
     "precio": "70000",
     "enVenta": "enVenta"
+  },
+  {
+    "id": "11",
+    "nombre": "asd",
+    "descripcion": "asfff",
+    "precio": "11",
+    "enVenta": "enVenta"
+  },
+  {
+    "id": "55",
+    "nombre": "asd",
+    "descripcion": "asdsd",
+    "precio": "3",
+    "enVenta": "enVenta",
+    "imagen": "Auto1.JPG"
   }
 ]
