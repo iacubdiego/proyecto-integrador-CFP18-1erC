@@ -6,7 +6,9 @@ const productsController = require('../controllers/productsController')
 // muestra todos los productos
 productsRoutes.get('/', productsController.mostrarProductos)
 // muestra un pruducto segun el id
-productsRoutes.get('/detalleProduct/:id', productsController.detalleById);
+// productsRoutes.get('/detalleProduct/:id', productsController.detalleById);
+productsRoutes.get('/detalleProducto/:id', productsController.detalleById);
+
 // crea un producto y lo guarda mediante el metodos POST
 productsRoutes.get('/create',productsController.createProduct)
 productsRoutes.post('/',productsController.storeProduct)
@@ -14,6 +16,8 @@ productsRoutes.post('/',productsController.storeProduct)
 productsRoutes.get('/edit/:id',productsController.editProduct)
 productsRoutes.put('/:id',productsController.updateProduct)
 // borra un producto
-productsRoutes.delete('/:id',productsController.deleteProduct)
+productsRoutes.get('/delete/:id',productsController.deleteProduct)
+
+// productsRoutes.delete('/',productsController.storeProduct)
 
 module.exports = productsRoutes

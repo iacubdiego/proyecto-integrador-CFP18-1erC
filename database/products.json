@@ -61,6 +61,33 @@
     "descripcion": "Focus",
     "precio": "18000",
     "enVenta": "enVenta"
+  },
+  {
+    "id": "14",
+    "nombre": "Subaru",
+    "descripcion": "XLA",
+    "precio": "19000",
+    "enVenta": "enVenta"
+  },
+  {
+    "id": "15",
+    "nombre": "Mustang",
+    "descripcion": "Ford",
+    "precio": "400000",
+    "enVenta": "enVenta"
+  },
+  {
+    "id": "16",
+    "nombre": "Renault",
+    "descripcion": "R12",
+    "precio": "7000",
+    "enVenta": "enVenta"
+  },
+  {
+    "id": "16",
+    "nombre": "Ford",
+    "descripcion": "Mustang",
+    "precio": "70000",
+    "enVenta": "enVenta"
   }
-  
 ]

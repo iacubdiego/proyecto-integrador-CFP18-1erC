@@ -9,11 +9,23 @@ const productsController = {
     mostrarProductos : (req,res)=>{
         res.render("index", { products : productList })
     },
-    detalleById : (req,res)=>{
+    /*
+    detalleById : (req , res) => {
         let id = req.params.id;
         // res.send("Get product by ID" + id);
        // res.render("products/createProducts");
-       res.render("products/detalleById"+id);
+       // res.render("products/detalleProduct"+id);
+       let id = req.params.id;
+        let product = productList.find(product => product.id == id);
+        res.render("products/detalleProduct", {product : product});
+
+    },
+    */
+    detalleById : (req , res) => {
+        let id = req.params.id;
+        let product = productList.find(product => product.id == id);
+        res.render("products/detalleProduct", {product : product});
+        
     },
     // crea un producto y lo guarda
     createProduct : (req , res) => {
@@ -40,8 +52,8 @@ const productsController = {
         for (let index = 0; index < productList.length; index++) {
             const elements = productList[index];
             if (elements.id == id){
-                productList[index] = newProduct;
-               // productList.put(newProduct);
+                // productList[index] = newProduct;
+               productList.put(newProduct);
             }
         }
         
@@ -50,6 +62,21 @@ const productsController = {
     },
     // ------------------------
     // borra un producto segun el id pasado
+    deleteProduct : (req , res) => {
+        let id = req.params.id;
+        let product = productList.find(product => product.id == id);
+        res.render("products/deleteProduct", {product : product});
+    
+    },
+    storeProduct : (req , res) => {
+        let product = req.body;
+        productList.push(product);
+        fs.writeFileSync(productListPath,JSON.stringify(productList,null,2));
+        res.redirect("/products");
+    },
+    //------------------------
+
+/*
     deleteProduct : (req,res) => {
         let id = req.params.id;
 
@@ -65,6 +92,7 @@ const productsController = {
         fs.readFileSync(productListPath,JSON.stringify(productList,null,2));
         res.redirect("/products");
     }
+    */
     //-----------------------------------
 
 }

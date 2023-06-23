@@ -11,6 +11,7 @@ app.use(express.json());
 app.set('views', __dirname +'/views');
 app.set('view engine', 'ejs');
 
+
 // indico cual es mi ruta
 const mainRoutes = require('./routes/mainRoutes')
 app.use('/',mainRoutes)
