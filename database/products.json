@@ -102,7 +102,6 @@
     "nombre": "asd",
     "descripcion": "asdsd",
     "precio": "3",
-    "enVenta": "enVenta",
-    "imagen": "Auto1.JPG"
+    "enVenta": "enVenta"
   }
 ]

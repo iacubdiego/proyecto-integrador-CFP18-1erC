@@ -1,4 +1,4 @@
-// const { v4: uuidv4 } = require('uuid');
+const { v4: uuidv4 } = require('uuid');
 const fs = require('fs');
 const path = require('path');
 
@@ -23,10 +23,20 @@ const productsController = {
         res.render("products/createProducts");
     },
     storeProduct : (req , res) => {
-        let product = req.body;
-        productList.push(product);
-        fs.writeFileSync(productListPath,JSON.stringify(productList,null,2));
-        res.redirect("/products");
+      //generamos un id
+      const id = uuidv4();
+      //capturamos lo que llega del formulario
+      const newProduct = req.body;
+      //le asignamos el id al producto
+      newProduct.id = id;
+      // le asignamos el array de imagenes
+    //   newProduct.images = req.files;
+      //agregamos el nuevo producto al array de productos
+      productList.push(newProduct);
+      //sobreescribimos el json con la nueva info
+      fs.writeFileSync(productListPath,JSON.stringify(productList,null,2));
+      // redirigimos al inicio
+      res.redirect("/products");
     },
     //------------------------
     // edita un producto y hace un update
