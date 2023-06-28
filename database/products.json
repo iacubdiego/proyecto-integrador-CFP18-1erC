@@ -3,7 +3,7 @@
     "id": "1",
     "nombre": "Fiat Cronos",
     "descripcion": "El mas vendido del año",
-    "precio": "20000",
+    "precio": "1",
     "enVenta": "En venta"
   },
   {
@@ -49,7 +49,7 @@
     "enVenta": "enVenta"
   },
   {
-    "id": "12",
+    "id": "40",
     "nombre": "Renault Sandero",
     "descripcion": "Ideal para la familia",
     "precio": "16000",
@@ -84,14 +84,14 @@
     "enVenta": "enVenta"
   },
   {
-    "id": "16",
+    "id": "17",
     "nombre": "Ford",
     "descripcion": "Mustang",
     "precio": "70000",
     "enVenta": "enVenta"
   },
   {
-    "id": "11",
+    "id": "60",
     "nombre": "asd",
     "descripcion": "asfff",
     "precio": "11",
@@ -103,5 +103,13 @@
     "descripcion": "asdsd",
     "precio": "3",
     "enVenta": "enVenta"
+  },
+  {
+    "id": "1e61806a-0793-4117-809e-60bfad369be9",
+    "nombre": "aa",
+    "descripcion": "vddvsdvs",
+    "precio": "3",
+    "enVenta": "enVenta",
+    "imagen": ""
   }
 ]

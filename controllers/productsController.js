@@ -42,25 +42,19 @@ const productsController = {
     // edita un producto y hace un update
     editProduct : (req , res) => {
         const id = req.params.id;
-        const filteredProduct = productList.find((product) => {
-            return product.id == id;
-        });
+        const filteredProduct = productList.find((product) => product.id == id); 
         res.render("products/edit", {product : filteredProduct});
-        
-    },
+            
+        },
     updateProduct : (req , res) => {
-        let id = req.params.id;
-        let newProduct = req.body;
-        newProduct.id = id;
-        for (let index = 0; index < productList.length; index++) {
-            const elements = productList[index];
-            if (elements.id == id){
-                // productList[index] = newProduct;
-               productList.put(newProduct);
-            }
-        }
-        
-        fs.readFileSync(productListPath,JSON.stringify(productList,null,2));
+        const id = req.params.id;
+        const { nombre, descripcion, precio, enVenta} = req.body;
+        const productActualizar = productList.find((product) => product.id == id);
+        productActualizar.nombre = nombre;
+        productActualizar.descripcion = descripcion;
+        productActualizar.precio = precio;
+        productActualizar.enVenta = enVenta;
+        fs.writeFileSync(productListPath,JSON.stringify(productList,null,2));
         res.redirect("/products");
     },
     // ------------------------

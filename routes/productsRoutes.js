@@ -29,8 +29,8 @@ productsRoutes.post('/', productsController.storeProduct)
 
 // Edita un producto segun el Id pasado y lo regraba mediante el metodo PUT
 productsRoutes.get('/edit/:id',productsController.editProduct)
-productsRoutes.put('/:id',productsController.updateProduct)
+productsRoutes.post('/:id',productsController.updateProduct)
 // borra un producto
-productsRoutes.delete('/delete/:id',productsController.deleteProduct)
+productsRoutes.post('/delete/:id',productsController.deleteProduct)
 
 module.exports = productsRoutes
