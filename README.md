@@ -12,6 +12,7 @@ Matías Ibañez - "Me gusta aprender algo nuevo"
 
 Ariel Campos Tula - "A resolver algoritmos!!!"
 
+Ger Collachagua - CFP18-Gracias
 
 Alejandra Ledda
 
