@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Barra lateral con filtros</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .sidebar {
+      width: 250px;
+      background-color: #605a5a;
+      height: 100vh;
+      /* position: fixed; */
+      top: 0;
+      left: 0;
+      padding: 20px;
+    }
+    
+    .sidebar h2 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    
+    .filter-section {
+      margin-bottom: 20px;
+    }
+    
+    .filter-section h3 {
+      font-size: 16px;
+      margin-bottom: 5px;
+    }
+    
+    .filter-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .filter-list li {
+      margin-bottom: 5px;
+    }
+    
+    .filter-list label {
+      display: block;
+    }
+    
+    .content {
+      margin-left: 250px;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <h2>Filtros</h2>
+    
+    <div class="filter-section">
+      <h3>Categoría</h3>
+      <ul class="filter-list">
+        <li>
+          <label>
+            <input type="checkbox"> Opción 1
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox"> Opción 2
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox"> Opción 3
+          </label>
+        </li>
+      </ul>
+    </div>
+    
+    <div class="filter-section">
+      <h3>Precio</h3>
+      <ul class="filter-list">
+        <li>
+          <label>
+            <input type="checkbox"> Menor a $100
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox"> $100 - $500
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox"> Mayor a $500
+          </label>
+        </li>
+      </ul>
+    </div>
+  </div>
+  
+  <!-- <div class="content">
+    <h1>Contenido principal</h1>
+    <p>Aquí iría el contenido principal de la página.</p>
+  </div> -->
+</body>
+</html>

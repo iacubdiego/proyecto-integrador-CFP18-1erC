@@ -1,0 +1,29 @@
+[
+    {
+    "id": 1,
+    "usuario":"JAIME",
+    "contraseña":"qwer",
+    "descripcion":"LALALA",
+    "edad":1,
+    "unicacion":"CABA",
+    "isAdmin":"isAdmin"
+    },
+    {
+    "id": 2,
+    "usuario":"JAIME",
+    "contraseña":"qwer",
+    "descripcion":"LALALA",
+    "edad":1,
+    "unicacion":"CABA",
+    "isAdmin":"isAdmin"
+    },
+    {
+    "id": 3,
+    "usuario":"JAIME",
+    "contraseña":"qwer",
+    "descripcion":"LALALA",
+    "edad":1,
+    "unicacion":"CABA",
+    "isAdmin":"isAdmin"
+        }
+]

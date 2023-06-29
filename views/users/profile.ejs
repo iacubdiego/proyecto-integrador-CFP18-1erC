@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfil</title>
+  <link rel="stylesheet" href="/css/profile.css">
+
+</head>
+<body>
+  <div class="container">
+    <h1>Perfil</h1>
+    <img class="profile-image" src="profile-picture.jpg" alt="Profile Picture">
+    <div class="profile-details">
+      <p><strong>Nombre:</strong> <%= filteredUser.usuario %></p>
+      <p><strong>Edad:</strong> <%= filteredUser.edad %></p>
+      <p><strong>Ubicación:</strong> <%= filteredUser.ubicacion %></p>
+    </div>
+  </div>
+</body>
+</html>

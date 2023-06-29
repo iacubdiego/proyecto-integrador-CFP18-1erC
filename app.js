@@ -22,6 +22,10 @@ app.use('/',mainRoutes)
 const productsRoutes = require('./routes/productsRoutes')
 app.use('/products',productsRoutes)
 
+const usersRoutes = require('./routes/usersRoutes')
+app.use('/users',usersRoutes)
+
+
 // app.use((req, res, next) => {
 //   res.status(404).render("404-page");
 //   next();

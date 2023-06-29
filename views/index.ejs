@@ -17,226 +17,23 @@
                 </div>
             </div>
       </section>
-
-<div class="max-conteiner">
-  
-    <section class="menuPrincipal">
-      <ul>
-        <li>
-          <h3>MENU</h3>
-        </li>
-        
-        <li>
-          <h3><a href="#">Modelo</a></h3>
-        </li>
-        <li>
-          <h3><a href="#">Kilometros</a></h3>
-        </li>
-        <li>
-          <h3><a href="#">Marca</a></h3>
-        </li>
-        <li>
-          <h3><a href="#">Precio</a></h3>
-        </li>
-        <li>
-          <h3><a href="#">Año</a></h3>
-        </li>
-        <li>
-          <h3><a href="#">Combustible</a></h3>
-        </li>
-        <li>
-          <h3><a href="#">Puertas</a></h3>
-        </li>
-        <li>
-          <h3><a href="#">Carroceria</a></h3>
-        </li>
-        <li>
-          <h3><a href="#">Color</a></h3>
-        </li>
-        <li>
-          <h3><a href="#">Financiamiento</a></h3>
-        </li>
-              <li>
-                  <ul>
-
-                  </ul>
-                  <ul>--------------</ul>
-                    <section class="menuProducto"></section>
-                          <h3>MENU DEL PRODUCTO</h3>
-                </li>
-              </li>
-              <li>
-          
-                <h3><a href="products/detalleProducto/:id">Detalle</a></h3>    <!--modifico la opcion-->
-            </li>
-
-                <li>
-          
-                      <h3><a href="/products/create" >Crear</a></h3>    <!--modifico la opcion-->
-                </li>
-
-                <li>
-          
-                      <h3><a href="/products/edit/:id" >Editar segun Id</a></h3> <!--modifico la opcion-->
-                </li>
-
-                <li>
-                      <h3><a href="/products/delete/:id">Borrar</a></h3>
-                          <!--modifico la opcion-->
-                </li>
-
-                <li>
-                      <h3><a href="#">Mostrar todos</a></h3>
-                </li>
-      </ul> <!-- ok -->
-    </section> <!--fin class="menuPrincipal-->
-  
-  
-  
-        <!-- NUEVO MENU DE EDICION DEL PRODUCTO-->
-
-
-        <!-- FIN DEL MENU DE EDICION DEL PRODUCTO-->
-
-  <div class="secciones">
-    <section class="seccion1">
-      <!-- <article> -->
-        
-      
-          <div class = "vehiculos">
-            <% for(let index=0; index < products.length; index++) { %>
-              
-            <!-- <a href="/detalle/products[index].id ">  -->
-               
-                <div class = "vehiculos2">
-                <article>
-                           
-                  <p class="opciones">
-                      <button>
-                          <h3><%= products[index].nombre %></h3>
-                    </button>
-                          <h4>Id: <%= products[index].id %></h4>
-                          <h5>Descripcion: <%= products[index].descripcion %></h5>
-                          <h5>Precio: <%= products[index].precio %></h5>
-                          <h5>Condicion: <%= products[index].enVenta %></h5>
-                          
-
-                          <h4><a style="background-color: rgb(127, 255, 138);"href="/products/detail/<%= products[index].id %>" >Detalle</a></h4>
-                          <h4><a style="background-color: rgb(11, 201, 96);"href="/products/edit/<%= products[index].id %>" >Editar</a></h4>
-                          <h4><a style="background-color: rgb(156, 19, 184);"href="/products/delete/<%= products[index].id %>" >Borrar</a></h4>
-                          
-                          
-                          
-                         <!--
-                          <p style="color: red;">El primer párrafo es rojo.</p>
-                          -->
-                  </p>
-             
-               </article>
-              </div>
-                               
-            <% } %>
-      
-
-          </div> <!-- fin class = "vehiculos" -->
-          <!-- fin class vehiculos -->
-          <!-- </article>-->
-
-          <div class="vehiculos_imagenes"> 
-
-              <article>
-                  <div>
-                    <button><h2>Peugeot 308 XRE</h2></button>
-                        <img src="https://i.postimg.cc/PfLckDPy/autoblanco.jpg" alt="detalleProducto" />
-                      
-                        <p>Precio</p>
-                        <button>Comprar</button>
-                  </div>
-              </article>
-
-              <article>
-                  <div>
-                    <button><h2>Volkswagen Golf</h2></button>
-                        <img src="https://i.postimg.cc/NLqm3SL3/autorojo.jpg" alt="detalleProducto" />
-                        <p>Precio</p>
-                        <button>Comprar</button>
-                  </div>
-              </article>
-
-              <article>
-                  <div>
-                    <button> <h2>Ford Ecosport 2.0</h2></button>
-                        <img src="https://i.postimg.cc/Y2JP2SFH/autonaranja.jpg" alt="detalleProducto" />
-                      <p>Precio</p>
-                      <button>Comprar</button>
-                  </div>
-              </article>
-            
-            </div> <!-- fin class = "vehiculos_imagenes" -->
-         <!--  class = "vehiculos_imagenes" super oferta -->
-           
-         
-    
-    <!-- fin de primera seccion y comienzo de la segunda seccion -->
-    
-      
+<!-- Contenedor-->
      
-    <!-- fin de primera seccion y comienzo de la segunda seccion -->
-    <section class="seccion2">
-      <article>
-        <img src="./image/Auto1.JPG" alt="productoALaVenta" />
-        <p>Producto a la venta</p>
-        <button>Comprar</button>
-      </article>
-      <article>
-        <img src="./image/Auto2.JPG" alt="productoALaVenta" />
-        <p>Producto a la venta</p>
-        <button>Comprar</button>
-      </article>
-      <article>
-        <img src="./image/Auto3.JPG" alt="productoALaVenta" />
-        <p>Producto a la venta</p>
-        <button>Comprar</button>
-      </article>
-      <article>
-        <img src="./image/Auto4.JPG" alt="Producto a la venta" />
-        <p>Producto a la venta</p>
-        <button>Comprar</button>
-      </article>
-      <article>
-        <img src="./image/Auto5.JPG" alt="productoALaVenta" />
-        <p>Producto a la venta</p>
-        <button>Comprar</button>
-      </article>
-      <article>
-        <img src="./image/Auto6.JPG" alt="Producto a la venta" />
-        <p>Producto a la venta</p>
-        <button>Comprar</button>
-      </article>
-    </section>
+      <div class="max-conteiner">
 
-    <section class="seccion1-2">
-      <article>
-        <div class="oferta">
-            <h2>Mercedes Benz Urban</h2>
-              <img src="https://i.postimg.cc/KvBH1y7g/autocolorcafe.jpg" alt="detalleproducto" />
-              <p>Precio</p>
-            <button>Consultar Precio</button>
-        </div>
-    </article> 
-     
+<!-- Filtros-->
 
-    </section>
+<%- include("./partials/filtros") %>
 
-    <!-- Fin de 2da Seccion-->
-  </div> <!-- fin seccion class="secciones-->
-      
-    </div>
+<!-- Tarjetas-->
+
+    <section class="seccion1" >
+
+        <%- include("./partials/card") %>
+      </section>
   </div>
 
   <%- include("./partials/footer") %>
 
 </body>
-
-
 </html>

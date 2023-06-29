@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tarjeta de venta de autos</title>
+  <style>
+    .card {
+      width: 300px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+      padding: 20px;
+      margin: 10px;
+    }
+    
+    .card img {
+      width: 100%;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+    
+    .card h2 {
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+    
+    .card p {
+      margin: 5px 0;
+    }
+    
+    .card .price {
+      font-size: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+    <% for(let index=0; index < 10; index++) { %>
+  <div class="card">
+
+
+    <img src="https://i.postimg.cc/PfLckDPy/autoblanco.jpg" alt="Car Image">
+    <h2><%= products[index].nombre %></h2>
+    <p><%= products[index].descripcion %></p>
+    <p>22,0000 Kilometros</p>
+    <p class="price"><%= products[index].precio %></p>
+ 
+
+</div>
+    <% } %>
+
+
+</body>
+</html>
