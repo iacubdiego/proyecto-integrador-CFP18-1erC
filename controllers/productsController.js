@@ -1,6 +1,8 @@
 const { v4: uuidv4 } = require('uuid');
 const fs = require('fs');
 const path = require('path');
+const { validationResult } = require("express-validator"); //mensajes de error para validaciones
+
 
 const productListPath = path.resolve(__dirname,"../database/products.json");
 const productList = JSON.parse(fs.readFileSync(productListPath,'utf-8'));
@@ -23,6 +25,18 @@ const productsController = {
         res.render("products/createProducts");
     },
     storeProduct : (req , res) => {
+      //guardamos en una variable que contrendra los errores, lo que llega mediante el req.
+    const errors = validationResult(req);
+
+    //si hay errores, mostramos los errores en la vista
+    if (!errors.isEmpty()) {
+      return res.render("products/create", {
+        errors: errors.mapped(),
+        old: req.body,
+      });
+      //sino cargamos el producto
+    } else {
+    
       //generamos un id
       const id = uuidv4();
       //capturamos lo que llega del formulario
@@ -37,7 +51,8 @@ const productsController = {
       fs.writeFileSync(productListPath,JSON.stringify(productList,null,2));
       // redirigimos al inicio
       res.redirect("/products");
-    },
+    }
+},
     //------------------------
     // edita un producto y hace un update
     editProduct : (req , res) => {

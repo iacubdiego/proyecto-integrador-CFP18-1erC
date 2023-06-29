@@ -1,22 +1,96 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+    .form-container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #f4f4f4;
+      border: 1px solid #ddd;
+    }
     
+    .form-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    
+    .form-group {
+      margin-bottom: 20px;
+    }
+    
+    .form-group label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    
+    .form-group input[type="text"],
+    .form-group input[type="number"],
+    .form-group textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+    
+    .form-group textarea {
+      resize: vertical;
+    }
+    
+    .form-group .error-message {
+      color: red;
+      margin-top: 5px;
+    }
+    
+    .form-actions {
+      text-align: center;
+      margin-top: 20px;
+    }
+    
+    .form-actions button {
+      padding: 10px 20px;
+      background-color: #4caf50;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+        </style>
+    </head>
+<body>
+  <div class="form-container">
+    <h2>Crear Producto</h2>
+    
+    <form id="product-form" action="/products" method="post">
+      <div class="form-group">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="name" name="nombre" required>
+      </div>
 
-<h1>Crear Producto</h1>
-<form action="/products" method="post">
-    <input type="text" name="id" placeholder="id">
-    <input type="text" name="nombre" placeholder="nombre">
-    <input type="text" name="descripcion" placeholder="descripcion">
-    <input type="text" name="precio" placeholder="precio">
-    <input type="text" name="enVenta" placeholder="enVenta">
-    <input type="file" name="imagen" id="file">
-    <button type="submit">Enviar</button>
-</form>
+      <div class="form-group">
+        <label for="precio">Precio:</label>
+        <input type="number" id="price" name="precio" step="0.01" min="0" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="descripcion">Descripción:</label>
+        <textarea id="description" name="descripcion" rows="4" required></textarea>
+      </div>
+
+      <div class="form-group"></div>
+      <label for="image">Subir imagen</label>
+      <input type="file" name="imagen" id="image" single>
+      </div>
+      
+      <div class="form-actions">
+        <button type="submit">Guardar</button>
+        <button type="reset">Limpiar</button>
+      </div>
+    </form>
+  </div>
+
 </body>
 </html>

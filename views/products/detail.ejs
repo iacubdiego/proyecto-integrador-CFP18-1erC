@@ -1,13 +1,85 @@
-<article>                          
-    <p class="opciones">
-        <button>
-            <h3><%= filteredProduct.nombre %></h3>
-      </button>
-            <h4>Id: <%= filteredProduct.id %></h4>
-            <h5>Descripcion: <%= filteredProduct.descripcion %></h5>
-            <h5>Precio: <%= filteredProduct.precio %></h5>
-            <h5>Condicion: <%= filteredProduct.enVenta %></h5>
-            <h3><a href="/products/edit/<%= filteredProduct.id %>" >Editar</a></h3>
-            <h3><a href="/products/edit/<%= filteredProduct.id %>" >Eliminar</a></h3>
-    </p>
- </article>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Detalles del Producto</title>
+
+<style>
+.product-details {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border: 1px solid #ddd;
+}
+
+.product-details h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.product-info {
+  margin-bottom: 20px;
+}
+
+.product-info label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.product-info input[type="text"],
+.product-info input[type="number"],
+.product-info textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+.product-info textarea {
+  resize: vertical;
+}
+
+.product-info input[type="text"][readonly],
+.product-info input[type="number"][readonly],
+.product-info textarea[readonly] {
+  background-color: #f4f4f4;
+  cursor: not-allowed;
+}
+
+</style>
+</head>
+<body>
+  <div class="product-details">
+    <h2>Detalles del Producto</h2>
+    
+    <div class="product-info">
+      <div class="form-group">
+        <label for="name">Nombre:</label>
+        <h3><%= filteredProduct.nombre %></h3>
+      </div>
+      
+      <img src="https://i.postimg.cc/PfLckDPy/autoblanco.jpg" alt="Car Image">
+
+
+      <div class="form-group">
+        <label for="price">Precio:</label>
+        <h5><%= filteredProduct.precio %></h5>
+      </div>
+      
+      <div class="form-group">
+        <label for="description">Descripción:</label>
+        <h5><%= filteredProduct.descripcion %></h5>      </div>
+    </div>
+    
+    <div class="form-group">
+    <h3><a href="/products/edit/<%= filteredProduct.id %>" >Editar</a></h3>
+    <h3><a href="/products/edit/<%= filteredProduct.id %>" >Eliminar</a></h3>
+    </div>
+
+  </div>
+
+
+</body>
+</html>

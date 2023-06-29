@@ -34,12 +34,12 @@
   </style>
 </head>
 <body>
-    <% for(let index=0; index < 10; index++) { %>
+    <% for(let index=0; index < products.length; index++) { %>
   <div class="card" data-id="2" data-name="Producto 2" data-price="20.00">
 
-
-    <img src="https://i.postimg.cc/PfLckDPy/autoblanco.jpg" alt="Car Image">
+    <img src="/image/uploads/<%= products[index].imagen %>" alt="Car Image">
     <h2><%= products[index].nombre %></h2>
+
     <p><%= products[index].descripcion %></p>
     <p>22,0000 Kilometros</p>
     <p class="price"><%= products[index].precio %></p>

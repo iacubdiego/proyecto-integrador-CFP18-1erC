@@ -4,112 +4,63 @@
     "nombre": "Fiat Cronos",
     "descripcion": "El mas vendido del año",
     "precio": "1",
-    "enVenta": "En venta"
+    "enVenta": "En venta",
+    "imagen":"Auto1.JPG"    
   },
   {
     "id": "2",
     "nombre": "Toyota Hilux",
     "descripcion": "El mas Buscado",
     "precio": "20000",
-    "enVenta": "En venta"
+    "enVenta": "En venta",
+    "imagen":"Auto2.JPG"
   },
   {
     "id": "3",
     "nombre": "Volkswagen Amarok",
     "descripcion": "Muy resistente",
     "precio": "20000",
-    "enVenta": "En venta"
+    "enVenta": "En venta",
+    "imagen":"Auto3.JPG"
   },
   {
     "id": "8",
     "nombre": "Chevrolet Onix",
     "descripcion": "Comodo y seguro",
     "precio": "18000",
-    "enVenta": "En Venta"
+    "enVenta": "En Venta",
+    "imagen":"Auto4.JPG"
   },
   {
     "id": "10",
     "nombre": "Volkswagen Gol",
     "descripcion": "El mas buscado",
     "precio": "12000",
-    "enVenta": "En venta"
+    "enVenta": "En venta",
+    "imagen":"Auto5.JPG"
   },
   {
     "id": "11",
     "nombre": "Ford Ka",
     "descripcion": "Muy familiar",
     "precio": "8000",
-    "enVenta": "En venta"
+    "enVenta": "En venta",
+    "imagen":"Auto6.JPG"
   },
   {
     "id": "12",
     "nombre": "Chevrolet Tracker",
     "descripcion": "Un Suv super comodo",
     "precio": "120000",
-    "enVenta": "enVenta"
+    "enVenta": "enVenta",
+    "imagen":"Auto6.JPG"
   },
   {
     "id": "40",
     "nombre": "Renault Sandero",
     "descripcion": "Ideal para la familia",
     "precio": "16000",
-    "enVenta": "enVenta"
-  },
-  {
-    "id": "13",
-    "nombre": "Ford",
-    "descripcion": "Focus",
-    "precio": "18000",
-    "enVenta": "enVenta"
-  },
-  {
-    "id": "14",
-    "nombre": "Subaru",
-    "descripcion": "XLA",
-    "precio": "19000",
-    "enVenta": "enVenta"
-  },
-  {
-    "id": "15",
-    "nombre": "Mustang",
-    "descripcion": "Ford",
-    "precio": "400000",
-    "enVenta": "enVenta"
-  },
-  {
-    "id": "16",
-    "nombre": "Renault",
-    "descripcion": "R12",
-    "precio": "7000",
-    "enVenta": "enVenta"
-  },
-  {
-    "id": "17",
-    "nombre": "Ford",
-    "descripcion": "Mustang",
-    "precio": "70000",
-    "enVenta": "enVenta"
-  },
-  {
-    "id": "60",
-    "nombre": "asd",
-    "descripcion": "asfff",
-    "precio": "11",
-    "enVenta": "enVenta"
-  },
-  {
-    "id": "55",
-    "nombre": "asd",
-    "descripcion": "asdsd",
-    "precio": "3",
-    "enVenta": "enVenta"
-  },
-  {
-    "id": "1e61806a-0793-4117-809e-60bfad369be9",
-    "nombre": "aa",
-    "descripcion": "vddvsdvs",
-    "precio": "3",
     "enVenta": "enVenta",
-    "imagen": ""
+    "imagen":"Auto1.JPG"
   }
 ]
