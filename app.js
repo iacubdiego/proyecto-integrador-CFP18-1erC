@@ -26,13 +26,27 @@ const usersRoutes = require('./routes/usersRoutes')
 app.use('/users',usersRoutes)
 
 
-// app.use((req, res, next) => {
-//   res.status(404).render("404-page");
-//   next();
-// });
 
 // configuarcion de public static
 app.use(express.static('public'));
+
+// ** DON'T TOUCH FROM HERE **
+// ** catch 404 and forward to error handler **
+
+app.use((req, res, next) => next(createError(404)));
+
+//Error handler
+app.use((err, req, res, next) => {
+    // set locals, only providing error in development
+    res.locals.message = err.message;
+    res.locals.path = req.path;
+    res.locals.error = req.app.get('env') === 'development' ? err : {};
+  
+    // render the error page
+    res.status(err.status || 500);
+    res.send('ESTE ES UN ERROR');//Falta cargar la vista
+  });
+
 
 
 app.listen(PORT, () => {

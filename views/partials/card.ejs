@@ -35,7 +35,7 @@
 </head>
 <body>
     <% for(let index=0; index < 10; index++) { %>
-  <div class="card">
+  <div class="card" data-id="2" data-name="Producto 2" data-price="20.00">
 
 
     <img src="https://i.postimg.cc/PfLckDPy/autoblanco.jpg" alt="Car Image">
@@ -43,10 +43,19 @@
     <p><%= products[index].descripcion %></p>
     <p>22,0000 Kilometros</p>
     <p class="price"><%= products[index].precio %></p>
- 
+    <button class="add-to-cart">Agregar al carrito</button>
 
 </div>
+<script src="prodcutCart.ejs"></script>
     <% } %>
+
+
+    <!-- <div class="product" data-id="2" data-name="Producto 2" data-price="20.00">
+        <h2>Producto 2</h2>
+        <p>Precio: $20.00</p>
+        <button class="add-to-cart">Agregar al carrito</button>
+      </div>
+     -->
 
 
 </body>

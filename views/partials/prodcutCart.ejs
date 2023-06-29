@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Carrito de Compras</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    
+    h1 {
+      text-align: center;
+    }
+    
+    .cart {
+      border-collapse: collapse;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    
+    .cart th, .cart td {
+      padding: 10px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+    
+    .cart th {
+      background-color: #f4f4f4;
+    }
+    
+    .cart tr:hover {
+      background-color: #f9f9f9;
+    }
+    
+    .total {
+      text-align: right;
+      font-weight: bold;
+    }
+    
+    .actions {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 20px;
+    }
+    
+    .actions button {
+      background-color: #4caf50;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      margin-left: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Carrito de Compras</h1>
+    
+    <table class="cart">
+      <thead>
+        <tr>
+          <th>Producto</th>
+          <th>Precio</th>
+          <th>Cantidad</th>
+          <th>Total</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Producto 1</td>
+          <td>$10.00</td>
+          <td><input type="number" min="1" value="1"></td>
+          <td>$10.00</td>
+          <td><button class="remove">Eliminar</button></td>
+        </tr>
+        <tr>
+          <td>Producto 2</td>
+          <td>$20.00</td>
+          <td><input type="number" min="1" value="1"></td>
+          <td>$20.00</td>
+          <td><button class="remove">Eliminar</button></td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td class="total" colspan="3">Total:</td>
+          <td class="total">$30.00</td>
+          <td></td>
+        </tr>
+      </tfoot>
+    </table>
+    
+    <div class="actions">
+      <button class="update">Actualizar Carrito</button>
+      <button class="checkout">Checkout</button>
+    </div>
+  </div>
+
+  <script>
+    // Event listener para eliminar un producto del carrito
+    var removeButtons = document.getElementsByClassName('remove');
+    for (var i = 0; i < removeButtons.length; i++) {
+      removeButtons[i].addEventListener('click', function(event) {
+        event.target.parentNode.parentNode.remove();
+        updateTotal();
+      });
+    }
+
+    // Event listener para actualizar el total del carrito
+    function updateTotal() {
+      var cartItems = document.getElementsByClassName('cart')[0].getElementsByTagName('tbody')[0].getElementsByTagName('tr');
+      var total = 0;
+      for (var i = 0; i < cartItems.length; i++) {
+        var price = parseFloat(cartItems[i].getElementsByTagName('td')[1].innerText.slice(1));
+        var quantity = parseInt(cartItems[i].getElementsByTagName('input')[0].value);
+        var itemTotal = price * quantity;
+        cartItems[i].getElementsByTagName('td')[3].innerText = '$' + itemTotal.toFixed(2);
+        total += itemTotal;
+      }
+      document.getElementsByClassName('total')[0].innerText = '$' + total.toFixed(2);
+    }
+
+    // Event listener para actualizar el carrito
+    var updateButton = document.getElementsByClassName('update')[0];
+    updateButton.addEventListener('click', function() {
+      updateTotal();
+    });
+  </script>
+</body>
+</html>
